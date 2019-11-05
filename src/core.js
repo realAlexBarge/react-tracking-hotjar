@@ -5,7 +5,9 @@
  * @author Alexander Barge <alexander.barge@gmail.com>
  */
 
-const tracker = window.hj;
+export function getTracker() {
+  return window.hj;
+}
 
 export function initialize(newTrackerId) {
   /* eslint-disable */
@@ -26,10 +28,6 @@ export function initialize(newTrackerId) {
     a.appendChild(r);
   })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
   /* eslint-enable */
-}
-
-export function getTracker() {
-  return tracker;
 }
 
 export default {
