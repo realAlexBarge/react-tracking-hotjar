@@ -14,8 +14,6 @@ npm install react-tracking-hotjar --save
 
 # Usage
 
-### With npm
-
 Before tracking any page views or events the tracker needs to be imported and initialized with the custom tracking id:
 
 ```js
@@ -23,8 +21,14 @@ import HotjarTracking from 'react-tracking-hotjar';
 HotjarTracking.initialize('TRACKING_ID');
 ```
 
-There is also a method to expose the raw hj tracking object from the window:
+There is also a method to expose the raw hj tracking object api from the window:
 
 ```js
 HotjarTracking.getTracker();
 ```
+
+# How this works
+
+This modules takes care of injecting the provider specific tracking script into the document and provides a tiny wrapper for the tracking api. It also exposes the tracker object api for direct access.
+
+Documentation for the raw tracker api can be found [here](https://help.hotjar.com/hc/en-us/articles/115011639927-What-is-the-Hotjar-Tracking-Code-).
